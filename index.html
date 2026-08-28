@@ -1,70 +1,75 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Zeynep's Portfolio</title>
+  </head>
+  <body>
 
-    <head>
-        <meta charset="UTF-8" />
-       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>About Me</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600&display=swap" rel="stylesheet">
-        <style>
+    <nav>
+      <a href="#home">Zeynep</a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#drawings">Drawings</a></li>
+      </ul>
+    </nav>
 
-            body {
-            margin: 0;
-            font-family: system-ui, sans-serif;
-            background: #1a1a2e;
-            color: #eaeaea;
-            }
+    <header id="home">
+      <p>Computer Science · TU Munich</p>
+      <h1>Hi, I'm Zeynep.</h1>
+      <p> I build graph neural networks. When I step away from the
+        keyboard, I draw.</p>
+      <ul>
+        <li>TU Munich</li>
+        <li>Graph Neural Networks</li>
+        <li>PyTorch Geometric</li>
+        <li>DE / EN / TR</li>
+      </ul>
+      <p>[node-graph illustration will go here]</p>
+    </header>
 
-            #intro {
-            font-family: 'Fraunces', serif;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0 8%;
-            }
+    <section id="work">
+      <p>Projects</p>
+      <h2>Selected work</h2>
 
-            #intro h1 {
-            font-size: 4rem;
-            margin: 0;
-            }
+      <article>
+        <h3>Group Movie Recommender</h3>
+        <a href="#">View project</a>
+        <p>A heterogeneous graph neural network that recommends movies to
+          groups of people.</p>
+        <ul>
+          <li>PyTorch Geometric</li>
+          <li>Heterogeneous GNN</li>
+          <li>Recommender Systems</li>
+        </ul>
+      </article>
 
-            .tagline {
-            font-size: 1.5rem;
-            color: #b8b8d0;
-            margin: 0.5rem 0 1.5rem;
-            }
+      <article>
+        <h3>Train Delay Prediction</h3>
+        <a href="#">View project</a>
+        <p>A GNN trained on the rail network as a graph.</p>
+        <ul>
+          <li>PyTorch Geometric</li>
+          <li>Spatiotemporal GNNs</li>
+          <li>Data Pipelines</li>
+        </ul>
+      </article>
+    </section>
 
-            .blurb {
-            font-size: 1.1rem;
-            max-width: 500px;
-            line-height: 1.6;
-            }
+    <section id="drawings">
+      <p>Drawings</p>
+      <h2>From the sketchbook</h2>
+    </section>
 
-        </style>
+    <footer>
+      <p>© 2026 Zeynep</p>
+      <ul>
+        <li><a href="#">GitHub</a></li>
+        <li><a href="#">Email</a></li>
+      </ul>
+    </footer>
 
-    </head>
-
-    <body>
- 
-        <section id="intro">
-            <h1>Zeynep</h1>
-            <p class="tagline">CS student @ TU München</p>
-            <p class="blurb">
-                Programmer in the morning, artist at night
-            </p>
-        </section>
-
-
-
-
-        <script>
-
-            
-        </script>
-
-
-    </body>
-
+  </body>
 </html>
