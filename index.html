@@ -12,21 +12,72 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   
   <style>
-    
+      
+   
     html{
-    scroll-behavior: smooth;
-    scroll-padding-top: 64px;
+      scroll-behavior: smooth;
+      scroll-padding-top: 64px;
     } 
 
     h1,h2,h3{
-    font-family: 'Fraunces', serif;
-    font-weight: 600;
-    line-height: 1.1;
-    margin: 0;
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      line-height: 1.1;
+      margin: 0;
     }
 
-    
+    body{
+      margin:0;
+      background: #F3F1EA;
+      color: #23262B;
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1rem, 1vw + 0.6rem, 1.15rem);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
+    .container{
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 clamp(1.25rem, 4vw, 2.5rem);
+    }
+
+    a{ color: inherit; }
+
+    nav{
+      position: sticky; top:0; left:0; right:0; z-index: 50;
+      height: 64px;
+      display:flex; align-items:center;
+      background: transparent;
+      transition: background .3s ease, box-shadow .3s ease, backdrop-filter .3s ease;
+    }
+
+    nav.scrolled{
+      background: rgba(243,241,234,0.88);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 1px 0 rgba(35,38,43,0.14);
+    }
+
+    nav .container{
+      display:flex; align-items:center; justify-content:space-between; width:100%;
+    }
+
+    .nav-mark{
+      font-family:'Fraunces', serif; font-weight:700; font-size:1.15rem;
+      text-decoration:none;
+    }
+
+    .nav-links{
+      display:flex; gap: 1rem; list-style:none; margin:0; padding:0;
+      font-family:'JetBrains Mono', monospace; font-size: 0.8rem; letter-spacing:.03em;
+    }
+
+    .nav-links a{ text-decoration:none; border-bottom:1px solid transparent; padding-bottom:2px; transition: border-color .2s ease; }
+    .nav-links a:hover, .nav-links a:focus-visible{ border-color: var(--blueprint); }
+  
+    .filler{ padding-top: 120px; height: 1400px; }
+
+  
   </style>
 
   </head>
@@ -34,14 +85,19 @@
   
   <body>
 
-    <nav>
-      <a href="#home">Zeynep</a>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#drawings">Drawings</a></li>
-      </ul>
+    <nav id="siteNav">
+      <div class="container">
+        <a href="#home" class="nav-mark">Zeynep</a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#drawings">Drawings</a></li>
+        </ul>
+      </div>
     </nav>
+
+    <!-- will delete it. it's just for seeing how the nav bar works-->
+    <div class="container filler">  </div>
 
     <header id="home">
       <p>Computer Science · TU Munich</p>
@@ -138,4 +194,11 @@
     </footer>
 
   </body>
+
+  <script>
+    const nav = document.getElementById('siteNav');
+    window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+  </script>
 </html>
